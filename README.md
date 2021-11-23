@@ -1,5 +1,5 @@
 <p align="center">
-<a href="https://www.buymeacoffee.com/Dude-its-Matt-G"><img alt="Hotdogs!" src="https://img.shields.io/badge/Buy%20Me%20a%20Hotdog-%F0%9F%8C%AD-blue?style=for-the-badge"></a>
+<a href="https://www.buymeacoffee.com/Dude.its.Matt.G"><img alt="Hotdogs!" src="https://img.shields.io/badge/Buy%20Me%20a%20Hotdog-%F0%9F%8C%AD-blue?style=for-the-badge"></a>
 <img alt="GitHub Sponsors" src="https://img.shields.io/github/sponsors/Dude-its-Matt-G?style=for-the-badge"></img>
 <img alt="GitHub followers" src="https://img.shields.io/github/followers/Dude-its-Matt-G?style=for-the-badge"></img>
 <img alt="GitHub User's stars" src="https://img.shields.io/github/stars/Dude-its-Matt-G?style=for-the-badge"></img>
@@ -189,7 +189,7 @@ There are many ways to contribute to the project! Adding features, fixing featur
 <br>
 Sounds silly but every hotdog goes towards achieving goals! Wanna buy me a hotdog? Click below!<br></p>
 <p align="center">
-<a href="https://www.buymeacoffee.com/Dude-its-Matt-G"><img alt="Yay hotdogs!" src="https://img.shields.io/badge/Buy%20Me%20a%20Hotdog-%F0%9F%8C%AD-blue?style=for-the-badge"></a></p>
+<a href="https://www.buymeacoffee.com/Dude.its.Matt.G"><img alt="Yay hotdogs!" src="https://img.shields.io/badge/Buy%20Me%20a%20Hotdog-%F0%9F%8C%AD-blue?style=for-the-badge"></a></p>
 <br>
 <p align="center">
 Please be sure to read the contribution guide!</p>
