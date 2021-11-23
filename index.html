@@ -1,0 +1,828 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Aldrich&&family=Epilogue:wght@500&family=Source+Code+Pro:wght@400&family=VT323&display=swap" rel="stylesheet">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Super Controller</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
+
+    <!-- Bootstrap Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Share+Tech+Mono'>
+    <!--<link rel="stylesheet" href="./style.css">-->
+    <!-- <link href="./dark_RBSC.css" rel="stylesheet" type="text/css">  -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+
+    <script type="text/javascript">
+        document.getElementById('hide_id').style.cursor = 'none';
+    </script>
+
+    <script> 
+        function setTheme(themeName) {
+            localStorage.setItem('theme', themeName);
+    //document.documentElement.className = themeName;
+
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+    if (themeName == "theme-dark") {
+        link.href = './dark_RBSC.css';
+    } else {
+        link.href = './light_RBSC.css';
+    }
+        document.head.appendChild(link);
+    }
+
+    // function to toggle between light and dark theme
+        function toggleTheme() {
+    if (localStorage.getItem('theme') === 'theme-dark') {
+        setTheme('theme-light');
+    } else {
+        setTheme('theme-dark');
+    }
+        }
+
+    // Immediately invoked function to set the theme on initial load
+    (function() {
+    if (localStorage.getItem('theme') === 'theme-dark') {
+        setTheme('theme-dark');
+    } else {
+        setTheme('theme-light');
+    }
+    })();
+</script> 
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="plastic-label">
+            <div class="title" aria-hidden="true">
+                <div class="model-wrapper">
+                    <div class="model-main"><p class="top-name">RUNBOX</span></p></div>
+                    <div class="model-sub"><p class="sub-type">SUPER CONTROLLER</span></p></div>
+                </div>
+                <div class="function-wrapper">
+                    <div class="function-titles">
+                        <div class="funct-child">MUSIC</div>
+                        <div class="funct-child">HWMON</div>
+                        <div class="funct-child">AUDIO</div>
+                        <div class="funct-child">THEME</div>
+                        <div class="funct-child">CONF</div>
+                    </div>
+                <div class="theme_button">
+                    <button class="switch" id="switch" onclick="toggleTheme()">
+                        <div id="hide_id"></div>•</button>
+                    <button class="switch" id="switch" onclick="toggleTheme()">
+                        <div id="hide_id"></div>•</button>
+                    <button class="switch" id="switch" onclick="toggleTheme()">
+                            <div id="hide_id"></div>•</button>
+                    <button class="switch" id="switch" onclick="toggleTheme()">
+                            <div id="hide_id"></div>•</button>
+                    <button class="switch" id="switch" onclick="toggleTheme()">
+                            <div id="hide_id"></div>•</button>
+                    </div>
+                </div>
+            </div>   
+        </div>
+    </div>
+<div class="everything">
+    <div class="left-side">
+    <div class="button-container">
+    <p class="track-top">  control a  </p>
+    
+                            
+    <div class="buttons"> 
+                
+      <div class="channel">
+                <div class="inset">
+                  <div class="port-no">1</div> 
+                  <div class="button-rodeo">
+                      <label>
+                          <input type="checkbox" id="myonoffswitch1" value="on" onclick='B1P1(this);'></input>
+                          <i></i>
+                      </label>
+                    </div>
+                </div>
+                <div class="inset">
+                  <div class="port-no">2</div>  
+                  <div class="button-rodeo">
+                      <label>
+                        <input type="checkbox" id="myonoffswitch2" value="on" onclick='B1P2(this);'></input>
+                          <i></i>
+                      </label>
+                    </div>
+                </div>
+              <div class="inset">
+                <div class="port-no">3</div>   
+                <div class="button-rodeo">
+                      <label>
+                        <input type="checkbox" id="myonoffswitch3" value="on" onclick='B1P3(this);'></input>
+                          <i></i>
+                      </label>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="list">
+        <p class="txt">mic</p>
+        <p class="txt">web cam</p>
+        <p class="txt">xbox dongle</p>
+    </div>
+</div>
+<div class="button-container">
+    <p class="track-top">  control b  </p>
+                               
+    <div class="buttons"> 
+        <div class="channel">
+            <div class="inset">
+                    <div class="port-no">1</div> 
+                    <div class="button-rodeo">
+                      <label>
+                        <input type="checkbox" id="myonoffswitch4" value="on" onclick='B2P1(this);'></input>
+                          <i></i>
+                      </label>
+                    </div>
+                </div>
+                <div class="inset">
+                  <div class="port-no">2</div>  
+                  <div class="button-rodeo">
+                      <label>
+                        <input type="checkbox" id="myonoffswitch5" value="on" onclick='B2P2(this);'></input>
+                          <i></i>
+                      </label>
+                    </div>
+                </div>
+              <div class="inset">
+                <div class="port-no">3</div>   
+                <div class="button-rodeo">
+                      <label>
+                        <input type="checkbox" id="myonoffswitch6" value="on" onclick='B2P3(this);'></input>
+                          <i></i>
+                      </label>
+                    </div>
+                </div>
+    </div>
+</div>
+<div class="list">
+    <p class="txt">wacom</p>
+    <p class="txt">phone</p>
+    <p class="txt">vr headset</p>
+</div>
+</div>
+<div class="button-container">
+    <p class="track-top">  control c  </p>
+    
+    <div class="buttons"> 
+                
+        <div class="channel">
+            <div class="inset">
+                <div class="port-no">1</div> 
+                <div class="button-rodeo">
+                    <label>
+                        <input type="checkbox" id="myonoffswitch7" value="on" onclick='B3P1(this);'></input>
+                        <i></i>
+                    </label>
+                </div>
+            </div>
+            <div class="inset">
+                <div class="port-no">2</div>  
+                <div class="button-rodeo">
+                    <label>
+                        <input type="checkbox" id="myonoffswitch8" value="on" onclick='B3P2(this);'></input>
+                        <i></i>
+                    </label>
+                </div>
+            </div>
+            <div class="inset">
+                <div class="port-no">3</div>   
+                <div class="button-rodeo">
+                    <label>
+                        <input type="checkbox" id="myonoffswitch9" value="on" onclick='B3P3(this);'></input>
+                        <i></i>
+                    </label>
+                </div>
+            </div>
+    </div>
+</div>
+<div class="list">
+    <p class="txt">front left VR Sensor</p>
+    <p class="txt">front right VR Sensor</p>
+    <p class="txt">rear left VR Sensor</p>
+</div>
+</div>
+</div>
+<div class="right-side">
+<div class="key-container">
+            <a class="key" onclick="load01();">bank 1</a>
+            <a class="key" onclick="load02();">bank 2</a>
+            <a class="key" onclick="load03();">bank 3</a>
+                <div class="vl"></div>
+            <a class="save" onclick="save01();">Save 1</a>
+            <a class="save" onclick="save02();">Save 2</a>
+            <a class="save" onclick="save03();">Save 3</a>
+                <div class="vl"></div>
+            <a class="off" onclick="uncheck();">OFF</a>
+        </div>
+<!--Below is what maps all of the buttons to their respective on-off commands-->
+</div>
+</div>
+
+<script>    
+    const { ipcRenderer } = require('electron')
+    let isOn = false
+        function B1P1(cb) {
+            console.log("Clicked, new value = " + cb.checked);
+                if(cb.checked){
+                    ipcRenderer.send('B1P1', 'ON')
+                        }else{
+                    ipcRenderer.send('B1P1', 'OFF')
+                    }
+        }                   
+        function B1P2(cb) {
+            console.log("Clicked, new value = " + cb.checked);
+                if(cb.checked){
+                    ipcRenderer.send('B1P2', 'ON')
+                        }else{
+                    ipcRenderer.send('B1P2', 'OFF')
+                    }
+        }
+            
+                    function B1P3(cb) {
+                        console.log("Clicked, new value = " + cb.checked);
+                        if(cb.checked){
+                            ipcRenderer.send('B1P3', 'ON')
+                        }else{
+                            ipcRenderer.send('B1P3', 'OFF')
+                        }
+                    }
+            
+                    function B2P1(cb) {
+                        console.log("Clicked, new value = " + cb.checked);
+                        if(cb.checked){
+                            ipcRenderer.send('B2P1', 'ON')
+                        }else{
+                            ipcRenderer.send('B2P1', 'OFF')
+                        }
+                    }
+            
+                    function B2P2(cb) {
+                        console.log("Clicked, new value = " + cb.checked);
+                        if(cb.checked){
+                            ipcRenderer.send('B2P2', 'ON')
+                        }else{
+                            ipcRenderer.send('B2P2', 'OFF')
+                        }
+                    }
+            
+                    function B2P3(cb) {
+                        console.log("Clicked, new value = " + cb.checked);
+                        if(cb.checked){
+                            ipcRenderer.send('B2P3', 'ON')
+                        }else{
+                            ipcRenderer.send('B2P3', 'OFF')
+                        }
+                    }
+            
+                    function B3P1(cb) {
+                        console.log("Clicked, new value = " + cb.checked);
+                        if(cb.checked){
+                            ipcRenderer.send('B3P1', 'ON')
+                        }else{
+                            ipcRenderer.send('B3P1', 'OFF')
+                        }
+                    }
+            
+                    function B3P2(cb) {
+                        console.log("Clicked, new value = " + cb.checked);
+                        if(cb.checked){
+                            ipcRenderer.send('B3P2', 'ON')
+                        }else{
+                            ipcRenderer.send('B3P2', 'OFF')
+                        }
+                    }
+            
+                    function B3P3(cb) {
+                        console.log("Clicked, new value = " + cb.checked);
+                        if(cb.checked){
+                            ipcRenderer.send('B3P3', 'ON')
+                        }else{
+                            ipcRenderer.send('B3P3', 'OFF')
+                        }
+                    }
+            
+                    function B4P1(cb) {
+                        console.log("Clicked, new value = " + cb.checked);
+                        if(cb.checked){
+                            ipcRenderer.send('B4P1', 'ON')
+                        }else{
+                            ipcRenderer.send('B4P1', 'OFF')
+                        }
+                    }
+            
+                    function B4P2(cb) {
+                        console.log("Clicked, new value = " + cb.checked);
+                        if(cb.checked){
+                            ipcRenderer.send('B4P2', 'ON')
+                        }else{
+                            ipcRenderer.send('B4P2', 'OFF')
+                        }
+                    }
+            
+                    function B4P3(cb) {
+                        console.log("Clicked, new value = " + cb.checked);
+                        if(cb.checked){
+                            ipcRenderer.send('B4P3', 'ON')
+                        }else{
+                            ipcRenderer.send('B4P3', 'OFF')
+                        }
+                    }
+</script>
+
+<!--The shit below is all of the localstorage nonesense. If it works then it's not a bad idea, right?-->
+<script>
+    function uncheck(){
+        
+        var checked = JSON.parse(localStorage.getItem("myonoffswitch69"));
+        document.getElementById("myonoffswitch1").checked = checked; 
+        if(myonoffswitch1.checked){
+                ipcRenderer.send('B1P1', 'ON')
+                console.log("Successfully triggered B1P1 ON")
+            }else{
+                ipcRenderer.send('B1P1', 'OFF')
+                console.log("Successfully triggered B1P1 OFF")
+            }
+
+        var checked = JSON.parse(localStorage.getItem("myonoffswitch69"));
+        document.getElementById("myonoffswitch2").checked = checked; 
+        if(myonoffswitch2.checked){
+                ipcRenderer.send('B1P2', 'ON')
+                console.log("Successfully triggered B1P2 ON")
+            }else{
+                ipcRenderer.send('B1P2', 'OFF')
+                console.log("Successfully triggered B1P2 OFF")
+            }
+
+        var checked = JSON.parse(localStorage.getItem("myonoffswitch69"));
+        document.getElementById("myonoffswitch3").checked = checked; 
+        if(myonoffswitch3.checked){
+                ipcRenderer.send('B1P3', 'ON')
+                console.log("Successfully triggered B1P3 ON")
+            }else{
+                ipcRenderer.send('B1P3', 'OFF')
+                console.log("Successfully triggered B1P3 OFF")
+            }
+  
+
+            
+        var checked = JSON.parse(localStorage.getItem("myonoffswitch69"));
+        document.getElementById("myonoffswitch4").checked = checked; 
+        if(myonoffswitch4.checked){
+                ipcRenderer.send('B2P1', 'ON')
+                console.log("Successfully triggered B2P1 ON")
+            }else{
+                ipcRenderer.send('B2P1', 'OFF')
+                console.log("Successfully triggered B2P1 OFF")
+            }
+
+        var checked = JSON.parse(localStorage.getItem("myonoffswitch69"));
+        document.getElementById("myonoffswitch5").checked = checked; 
+        if(myonoffswitch5.checked){
+                ipcRenderer.send('B2P2', 'ON')
+                console.log("Successfully triggered B2P2 ON")
+            }else{
+                ipcRenderer.send('B2P2', 'OFF')
+                console.log("Successfully triggered B2P2 OFF")
+            }
+        var checked = JSON.parse(localStorage.getItem("myonoffswitch69"));
+        document.getElementById("myonoffswitch6").checked = checked; 
+        if(myonoffswitch6.checked){
+                ipcRenderer.send('B2P3', 'ON')
+                console.log("Successfully triggered B1P3 ON")
+            }else{
+                ipcRenderer.send('B2P3', 'OFF')
+                console.log("Successfully triggered B2P3 OFF")
+            }
+  
+
+
+        var checked = JSON.parse(localStorage.getItem("myonoffswitch69"));
+        document.getElementById("myonoffswitch7").checked = checked; 
+        if(myonoffswitch7.checked){
+                ipcRenderer.send('B3P1', 'ON')
+                console.log("Successfully triggered B3P1 ON")
+            }else{
+                ipcRenderer.send('B3P1', 'OFF')
+                console.log("Successfully triggered B3P1 OFF")
+            }
+        var checked = JSON.parse(localStorage.getItem("myonoffswitch69"));
+        document.getElementById("myonoffswitch8").checked = checked; 
+        if(myonoffswitch8.checked){
+                ipcRenderer.send('B3P2', 'ON')
+                console.log("Successfully triggered B3P2 ON")
+            }else{
+                ipcRenderer.send('B3P2', 'OFF')
+                console.log("Successfully triggered B3P2 OFF")
+            }
+        var checked = JSON.parse(localStorage.getItem("myonoffswitch69"));
+        document.getElementById("myonoffswitch9").checked = checked; 
+        if(myonoffswitch9.checked){
+                ipcRenderer.send('B3P3', 'ON')
+                console.log("Successfully triggered B3P3 ON")
+            }else{
+                ipcRenderer.send('B3P3', 'OFF')
+                console.log("Successfully triggered B3P3 OFF")
+            }
+            
+    console.log("ALL CLEAR")
+        }
+</script>
+
+<!--Below starts the save and load scripts.-->
+
+<script>
+    function save01() {
+        console.log("Save01 CLICKED!")
+      var checkbox = document.getElementById("myonoffswitch1");
+      localStorage.setItem("myonoffswitch1", checkbox.checked);
+      var checkbox2 = document.getElementById("myonoffswitch2");
+      localStorage.setItem("myonoffswitch2", checkbox2.checked);
+      var checkbox2 = document.getElementById("myonoffswitch3");
+      localStorage.setItem("myonoffswitch3", checkbox2.checked);
+      
+      var checkbox = document.getElementById("myonoffswitch4");
+      localStorage.setItem("myonoffswitch4", checkbox.checked);
+      var checkbox2 = document.getElementById("myonoffswitch5");
+      localStorage.setItem("myonoffswitch5", checkbox2.checked);
+      var checkbox2 = document.getElementById("myonoffswitch6");
+      localStorage.setItem("myonoffswitch6", checkbox2.checked);
+
+      var checkbox = document.getElementById("myonoffswitch7");
+      localStorage.setItem("myonoffswitch7", checkbox.checked);
+      var checkbox2 = document.getElementById("myonoffswitch8");
+      localStorage.setItem("myonoffswitch8", checkbox2.checked);
+      var checkbox2 = document.getElementById("myonoffswitch9");
+      localStorage.setItem("myonoffswitch9", checkbox2.checked);
+    }
+  
+
+</script>
+
+<script>
+    function load01(){
+        console.log("load01 CLICKED!")
+        var checked = JSON.parse(localStorage.getItem("myonoffswitch1"));
+        document.getElementById("myonoffswitch1").checked = checked; 
+        if(myonoffswitch1.checked){
+                ipcRenderer.send('B1P1', 'ON')
+                console.log("Successfully triggered B1P1 ON")
+            }else{
+                ipcRenderer.send('B1P1', 'OFF')
+                console.log("Successfully triggered B1P1 OFF")
+            }
+
+        var checked = JSON.parse(localStorage.getItem("myonoffswitch2"));
+        document.getElementById("myonoffswitch2").checked = checked; 
+        if(myonoffswitch2.checked){
+                ipcRenderer.send('B1P2', 'ON')
+                console.log("Successfully triggered B1P2 ON")
+            }else{
+                ipcRenderer.send('B1P2', 'OFF')
+                console.log("Successfully triggered B1P2 OFF")
+            }
+
+        var checked = JSON.parse(localStorage.getItem("myonoffswitch3"));
+        document.getElementById("myonoffswitch3").checked = checked; 
+        if(myonoffswitch3.checked){
+                ipcRenderer.send('B1P3', 'ON')
+                console.log("Successfully triggered B1P3 ON")
+            }else{
+                ipcRenderer.send('B1P3', 'OFF')
+                console.log("Successfully triggered B1P3 OFF")
+            }
+  
+
+            
+        var checked = JSON.parse(localStorage.getItem("myonoffswitch4"));
+        document.getElementById("myonoffswitch4").checked = checked; 
+        if(myonoffswitch4.checked){
+                ipcRenderer.send('B2P1', 'ON')
+                console.log("Successfully triggered B2P1 ON")
+            }else{
+                ipcRenderer.send('B2P1', 'OFF')
+                console.log("Successfully triggered B2P1 OFF")
+            }
+
+        var checked = JSON.parse(localStorage.getItem("myonoffswitch5"));
+        document.getElementById("myonoffswitch5").checked = checked; 
+        if(myonoffswitch5.checked){
+                ipcRenderer.send('B2P2', 'ON')
+                console.log("Successfully triggered B2P2 ON")
+            }else{
+                ipcRenderer.send('B2P2', 'OFF')
+                console.log("Successfully triggered B2P2 OFF")
+            }
+        var checked = JSON.parse(localStorage.getItem("myonoffswitch6"));
+        document.getElementById("myonoffswitch6").checked = checked; 
+        if(myonoffswitch6.checked){
+                ipcRenderer.send('B2P3', 'ON')
+                console.log("Successfully triggered B1P3 ON")
+            }else{
+                ipcRenderer.send('B2P3', 'OFF')
+                console.log("Successfully triggered B2P3 OFF")
+            }
+  
+
+
+        var checked = JSON.parse(localStorage.getItem("myonoffswitch7"));
+        document.getElementById("myonoffswitch7").checked = checked; 
+        if(myonoffswitch7.checked){
+                ipcRenderer.send('B3P1', 'ON')
+                console.log("Successfully triggered B3P1 ON")
+            }else{
+                ipcRenderer.send('B3P1', 'OFF')
+                console.log("Successfully triggered B3P1 OFF")
+            }
+        var checked = JSON.parse(localStorage.getItem("myonoffswitch8"));
+        document.getElementById("myonoffswitch8").checked = checked; 
+        if(myonoffswitch8.checked){
+                ipcRenderer.send('B3P2', 'ON')
+                console.log("Successfully triggered B3P2 ON")
+            }else{
+                ipcRenderer.send('B3P2', 'OFF')
+                console.log("Successfully triggered B3P2 OFF")
+            }
+        var checked = JSON.parse(localStorage.getItem("myonoffswitch9"));
+        document.getElementById("myonoffswitch9").checked = checked; 
+        if(myonoffswitch9.checked){
+                ipcRenderer.send('B3P3', 'ON')
+                console.log("Successfully triggered B3P3 ON")
+            }else{
+                ipcRenderer.send('B3P3', 'OFF')
+                console.log("Successfully triggered B3P3 OFF")
+            }
+    }
+  
+  </script>
+
+<script>
+    function save02() {
+        console.log("Save02 CLICKED!")
+        var checkbox = document.getElementById("myonoffswitch1");
+      localStorage.setItem("myonoffswitch1_2", checkbox.checked);
+      var checkbox2 = document.getElementById("myonoffswitch2");
+      localStorage.setItem("myonoffswitch2_2", checkbox2.checked);
+      var checkbox2 = document.getElementById("myonoffswitch4");
+      localStorage.setItem("myonoffswitch3_2", checkbox2.checked);
+      
+      var checkbox = document.getElementById("myonoffswitch4");
+      localStorage.setItem("myonoffswitch4_2", checkbox.checked);
+      var checkbox2 = document.getElementById("myonoffswitch5");
+      localStorage.setItem("myonoffswitch5_2", checkbox2.checked);
+      var checkbox2 = document.getElementById("myonoffswitch6");
+      localStorage.setItem("myonoffswitch6_2", checkbox2.checked);
+
+      var checkbox = document.getElementById("myonoffswitch7");
+      localStorage.setItem("myonoffswitch7_2", checkbox.checked);
+      var checkbox2 = document.getElementById("myonoffswitch8");
+      localStorage.setItem("myonoffswitch8_2", checkbox2.checked);
+      var checkbox2 = document.getElementById("myonoffswitch9");
+      localStorage.setItem("myonoffswitch9_2", checkbox2.checked);
+    }
+  
+
+</script>
+
+<script>
+    function load02(){
+        console.log("load02 CLICKED!")
+        var checked = JSON.parse(localStorage.getItem("myonoffswitch1_2"));
+        document.getElementById("myonoffswitch1").checked = checked; 
+        if(myonoffswitch1.checked){
+                ipcRenderer.send('B1P1', 'ON')
+                console.log("Successfully triggered B1P1 ON")
+            }else{
+                ipcRenderer.send('B1P1', 'OFF')
+                console.log("Successfully triggered B1P1 OFF")
+            }
+
+        var checked = JSON.parse(localStorage.getItem("myonoffswitch2_2"));
+        document.getElementById("myonoffswitch2").checked = checked; 
+        if(myonoffswitch2.checked){
+                ipcRenderer.send('B1P2', 'ON')
+                console.log("Successfully triggered B1P2 ON")
+            }else{
+                ipcRenderer.send('B1P2', 'OFF')
+                console.log("Successfully triggered B1P2 OFF")
+            }
+
+        var checked = JSON.parse(localStorage.getItem("myonoffswitch3_2"));
+        document.getElementById("myonoffswitch3").checked = checked; 
+        if(myonoffswitch3.checked){
+                ipcRenderer.send('B1P3', 'ON')
+                console.log("Successfully triggered B1P3 ON")
+            }else{
+                ipcRenderer.send('B1P3', 'OFF')
+                console.log("Successfully triggered B1P3 OFF")
+            }
+  
+
+            
+        var checked = JSON.parse(localStorage.getItem("myonoffswitch4_2"));
+        document.getElementById("myonoffswitch4").checked = checked; 
+        if(myonoffswitch4.checked){
+                ipcRenderer.send('B2P1', 'ON')
+                console.log("Successfully triggered B2P1 ON")
+            }else{
+                ipcRenderer.send('B2P1', 'OFF')
+                console.log("Successfully triggered B2P1 OFF")
+            }
+
+        var checked = JSON.parse(localStorage.getItem("myonoffswitch5_2"));
+        document.getElementById("myonoffswitch5").checked = checked; 
+        if(myonoffswitch5.checked){
+                ipcRenderer.send('B2P2', 'ON')
+                console.log("Successfully triggered B2P2 ON")
+            }else{
+                ipcRenderer.send('B2P2', 'OFF')
+                console.log("Successfully triggered B2P2 OFF")
+            }
+        var checked = JSON.parse(localStorage.getItem("myonoffswitch6_2"));
+        document.getElementById("myonoffswitch6").checked = checked; 
+        if(myonoffswitch6.checked){
+                ipcRenderer.send('B2P3', 'ON')
+                console.log("Successfully triggered B1P3 ON")
+            }else{
+                ipcRenderer.send('B2P3', 'OFF')
+                console.log("Successfully triggered B2P3 OFF")
+            }
+  
+
+
+        var checked = JSON.parse(localStorage.getItem("myonoffswitch7_2"));
+        document.getElementById("myonoffswitch7").checked = checked; 
+        if(myonoffswitch7.checked){
+                ipcRenderer.send('B3P1', 'ON')
+                console.log("Successfully triggered B3P1 ON")
+            }else{
+                ipcRenderer.send('B3P1', 'OFF')
+                console.log("Successfully triggered B3P1 OFF")
+            }
+        var checked = JSON.parse(localStorage.getItem("myonoffswitch8_2"));
+        document.getElementById("myonoffswitch8").checked = checked; 
+        if(myonoffswitch8.checked){
+                ipcRenderer.send('B3P2', 'ON')
+                console.log("Successfully triggered B3P2 ON")
+            }else{
+                ipcRenderer.send('B3P2', 'OFF')
+                console.log("Successfully triggered B3P2 OFF")
+            }
+        var checked = JSON.parse(localStorage.getItem("myonoffswitch9_2"));
+        document.getElementById("myonoffswitch9").checked = checked; 
+        if(myonoffswitch9.checked){
+                ipcRenderer.send('B3P3', 'ON')
+                console.log("Successfully triggered B3P3 ON")
+            }else{
+                ipcRenderer.send('B3P3', 'OFF')
+                console.log("Successfully triggered B3P3 OFF")
+            }
+
+    }
+  
+  </script>
+
+<script>
+    function save03() {
+        console.log("Save03 CLICKED!")
+      var checkbox = document.getElementById("myonoffswitch1");
+      localStorage.setItem("myonoffswitch1_3", checkbox.checked);
+      var checkbox2 = document.getElementById("myonoffswitch2");
+      localStorage.setItem("myonoffswitch2_3", checkbox2.checked);
+      var checkbox2 = document.getElementById("myonoffswitch3");
+      localStorage.setItem("myonoffswitch3_3", checkbox2.checked);
+
+      var checkbox = document.getElementById("myonoffswitch4");
+      localStorage.setItem("myonoffswitch4_3", checkbox.checked);
+      var checkbox2 = document.getElementById("myonoffswitch5");
+      localStorage.setItem("myonoffswitch5_3", checkbox2.checked);
+      var checkbox2 = document.getElementById("myonoffswitch6");
+      localStorage.setItem("myonoffswitch6_3", checkbox2.checked);
+
+      var checkbox = document.getElementById("myonoffswitch7");
+      localStorage.setItem("myonoffswitch7_3", checkbox.checked);
+      var checkbox2 = document.getElementById("myonoffswitch8");
+      localStorage.setItem("myonoffswitch8_3", checkbox2.checked);
+      var checkbox2 = document.getElementById("myonoffswitch9");
+      localStorage.setItem("myonoffswitch9_3", checkbox2.checked);
+    }
+  
+
+</script>
+
+<script>
+    function load03(){
+        console.log("load03 CLICKED!")
+        var checked = JSON.parse(localStorage.getItem("myonoffswitch1_3"));
+        document.getElementById("myonoffswitch1").checked = checked; 
+        if(myonoffswitch1.checked){
+                ipcRenderer.send('B1P1', 'ON')
+                console.log("Successfully triggered B1P1 ON")
+            }else{
+                ipcRenderer.send('B1P1', 'OFF')
+                console.log("Successfully triggered B1P1 OFF")
+            }
+
+        var checked = JSON.parse(localStorage.getItem("myonoffswitch2_3"));
+        document.getElementById("myonoffswitch2").checked = checked; 
+        if(myonoffswitch2.checked){
+                ipcRenderer.send('B1P2', 'ON')
+                console.log("Successfully triggered B1P2 ON")
+            }else{
+                ipcRenderer.send('B1P2', 'OFF')
+                console.log("Successfully triggered B1P2 OFF")
+            }
+
+        var checked = JSON.parse(localStorage.getItem("myonoffswitch3_3"));
+        document.getElementById("myonoffswitch3").checked = checked; 
+        if(myonoffswitch3.checked){
+                ipcRenderer.send('B1P3', 'ON')
+                console.log("Successfully triggered B1P3 ON")
+            }else{
+                ipcRenderer.send('B1P3', 'OFF')
+                console.log("Successfully triggered B1P3 OFF")
+            }
+  
+
+            
+        var checked = JSON.parse(localStorage.getItem("myonoffswitch4_3"));
+        document.getElementById("myonoffswitch4").checked = checked; 
+        if(myonoffswitch4.checked){
+                ipcRenderer.send('B2P1', 'ON')
+                console.log("Successfully triggered B2P1 ON")
+            }else{
+                ipcRenderer.send('B2P1', 'OFF')
+                console.log("Successfully triggered B2P1 OFF")
+            }
+
+        var checked = JSON.parse(localStorage.getItem("myonoffswitch5_3"));
+        document.getElementById("myonoffswitch5").checked = checked; 
+        if(myonoffswitch5.checked){
+                ipcRenderer.send('B2P2', 'ON')
+                console.log("Successfully triggered B2P2 ON")
+            }else{
+                ipcRenderer.send('B2P2', 'OFF')
+                console.log("Successfully triggered B2P2 OFF")
+            }
+        var checked = JSON.parse(localStorage.getItem("myonoffswitch6_3"));
+        document.getElementById("myonoffswitch6").checked = checked; 
+        if(myonoffswitch6.checked){
+                ipcRenderer.send('B2P3', 'ON')
+                console.log("Successfully triggered B1P3 ON")
+            }else{
+                ipcRenderer.send('B2P3', 'OFF')
+                console.log("Successfully triggered B2P3 OFF")
+            }
+  
+
+
+        var checked = JSON.parse(localStorage.getItem("myonoffswitch7_3"));
+        document.getElementById("myonoffswitch7").checked = checked; 
+        if(myonoffswitch7.checked){
+                ipcRenderer.send('B3P1', 'ON')
+                console.log("Successfully triggered B3P1 ON")
+            }else{
+                ipcRenderer.send('B3P1', 'OFF')
+                console.log("Successfully triggered B3P1 OFF")
+            }
+        var checked = JSON.parse(localStorage.getItem("myonoffswitch8_3"));
+        document.getElementById("myonoffswitch8").checked = checked; 
+        if(myonoffswitch8.checked){
+                ipcRenderer.send('B3P2', 'ON')
+                console.log("Successfully triggered B3P2 ON")
+            }else{
+                ipcRenderer.send('B3P2', 'OFF')
+                console.log("Successfully triggered B3P2 OFF")
+            }
+        var checked = JSON.parse(localStorage.getItem("myonoffswitch9_3"));
+        document.getElementById("myonoffswitch9").checked = checked; 
+        if(myonoffswitch9.checked){
+                ipcRenderer.send('B3P3', 'ON')
+                console.log("Successfully triggered B3P3 ON")
+            }else{
+                ipcRenderer.send('B3P3', 'OFF')
+                console.log("Successfully triggered B3P3 OFF")
+            }
+    }
+  
+  </script>
+
+</body>
+</html>

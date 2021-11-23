@@ -1,0 +1,23 @@
+{
+  "name": "electron-gpio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^12.0.9",
+    "electron-rebuild": "^2.3.5"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.9.2",
+    "bootstrap": "^5.0.1",
+    "jquery": "^3.6.0",
+    "onoff": "^6.0.3",
+    "popper.js": "^1.14.3"
+  }
+}
