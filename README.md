@@ -7,7 +7,7 @@
 
 ---
 <p align="center">
-  <img width="1012" height="404.8" src="https://github.com/Dude-its-Matt-G/RUNBOX/blob/main/RBSC.png">
+  <img width="830" height="332" src="https://github.com/Dude-its-Matt-G/RUNBOX/blob/main/RBSC.png">
 </p>
  
 <p align="center">
