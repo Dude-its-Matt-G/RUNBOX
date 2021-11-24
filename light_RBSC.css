@@ -1,6 +1,7 @@
 * {
   cursor: none;
   }
+
 body {
   border-radius: 0px;
   background-image: linear-gradient(#CBBEB6 7.4% 9.5%, #CBBEB6 96%), linear-gradient(170deg, #CDC4BD, #C6BDB6);
@@ -10,14 +11,17 @@ body {
   text-transform: uppercase;
   position: absolute;
 }
+
 label {
   margin: 0px auto;
   vertical-align: middle;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
 label:focus, label:active {
   outline: none;
 }
+
 label input {
   display: none;
 }
@@ -57,7 +61,6 @@ label input:checked + i {
 }
 /* END MAIN BUTTONS */
 
-
 .title {
   display: inline-flex;
   align-items: center;
@@ -94,33 +97,35 @@ label input:checked + i {
   background-color: #5c5c5c; /*if you make this dark you'll need to fix the highlisting from the edges */
   box-shadow: 
   0 0 2px 0.5px rgba(65, 61, 58, 0.15) inset;
-
 }
 
 .model-main {
-position: relative;
-display: inline-flexbox;
-text-align: right;
-height: 50px;
-margin-top: -10px;
-margin-right: 32px;
-margin-bottom: -10px;
-z-index: 2;
+  position: relative;
+  display: inline-flexbox;
+  text-align: right;
+  height: 50px;
+  margin-top: -10px;
+  margin-right: 32px;
+  margin-bottom: -10px;
+  z-index: 2;
 }
 
 .model-sub{
-position: relative;
-display: inline-flexbox;
-text-align: right;
-height: 20px;
-margin-right: 26px;
-z-index: 2;
+  position: relative;
+  display: inline-flexbox;
+  text-align: right;
+  height: 20px;
+  margin-right: 25px;
+  z-index: 2;
+  padding-top: 2px;
 }
+
 .class-make{
    background: linear-gradient(to bottom, #f4f4f4, #8f8f8f);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .make{
   position: fixed;
   top: 6px;
@@ -148,16 +153,13 @@ z-index: 2;
   height: 24px;
   width: 380px;
   margin-left: 300px;
-  margin: 4px 4px auto;
+  margin: 4px 0px auto;
   display: inline-block;
   padding-bottom: 5px;
   margin-left: 3px;
   border-radius: 3px;
-  border: #c0c0c0;
-  border-width: 1px;
-  border-style: solid;
+  border: 1px solid #9b9b9b;
   background-color: #c0c0c0;
-  
 }
 
 .funct-child{
@@ -168,7 +170,7 @@ z-index: 2;
   margin-right: 5px;
   margin-left: 5px;
   color: #000;
-
+  font-weight: bold;
 }
 
 .theme_button{
@@ -185,18 +187,15 @@ z-index: 2;
 
 .model-wrapper {
   width: 250px;
-  
 }
 
 .top-name {
-  font-size: 36px;
+  font-size: 38px;
   font-family: "Audiowide", sans-serif;
   letter-spacing: -1px;
-  color: #ececec;
-
-  
-  
+  color: #ececec; 
 }
+
 .sub-type {
   font-size: 14px;
   letter-spacing: 1px;
@@ -204,9 +203,6 @@ z-index: 2;
   font-weight: 500;
   color: #ececec;
   text-transform: uppercase;
-  
-  
-  
 }
 
 .key-container {
@@ -243,6 +239,7 @@ z-index: 2;
     0 0 0px 2px rgba(224, 212, 210, 1);
   border-radius: 4px;
 }
+
 .everything {
 display: flex;
 height: 668;
@@ -265,44 +262,17 @@ height: 668;
   padding-top: 10px;
   padding-right: 20px;
 }
+
 .left-side{
   float: left;
   width: 768px;
   height: 500px;
 }
 
-  border-radius: 2px;
-  /*border: 1px solid #6d6d6d;*/
-  box-shadow:
-    0px 2px 1px -1.5px #635A53 inset,
-    0 0px 1px -0.5px #CBBEB6 inset,
-    0 0px 2px -1px #CBBEB6 inset,
-    /* 0 5px 10px -3px #BEB5AC inset, /*top inner shadow/highlight */
-    /* 0 -5px 10px -3px #CBBEB6 inset, /*lower inner shadow/highlight */
-    0 0 1px 0.25px #B9B0A9 inset, /* lower inner shadow going north */
-    0px -1px 0px 1px #CBBEB6, /* weird border whitish shine */
-    0 0.5px 0px -0.5px #9d9d9d, /* lower depth */
-    0 1px 1px -2px #3d3d3d,
-    0 0px 0.75px -0.25px #000,
-    0 -1px 0px -0.25px #D5CCC3,
-    0 0px 0px -1px #D2C9C2,
-    0px 0 1px rgba(214, 205, 198, 1),
-    0px 0 1px rgba(202, 193, 186, 1),
-    0 0 0px 2px rgba(224, 212, 210, 1);
-
-  /*box-shadow:
-  1px 0 1px -0.5px rgba(167, 158, 151, 0.5), 
-  0.25px -0.25px 2px rgba(167, 158, 151, 0.5), 
-  0 0.5px 1.5px -0.9px #D4CBC4 inset, 
-  0 1.5px 1px -0.25px rgba(238, 231, 226, 0.2) inset; change */
-}
-
 .port-no {
   margin: 0px auto;
   color: #473E37;
 }
-
-
 
 .button-container {
   display: block;
@@ -318,22 +288,21 @@ height: 668;
   0 0.5px 15px -0.9px #D4CBC4 inset, 
   0 1.5px 1px -0.25px rgba(238, 231, 226, 0.5) inset;
   margin-bottom: 1px;
-
-
 }
+
 .buttons {
   display: grid;
   grid-column-gap: 0;
   grid-template-columns: repeat(auto-fit, minmax(1px, 1fr));
   text-align: center;
-  
   width: 100%;
   flex: 1;
 }
+
 .button-rodeo {
-  margin: 5px auto;
-  
+  margin: 5px auto; 
 }
+
 .channel {
   position: relative;
   display: grid;
@@ -363,14 +332,15 @@ height: 668;
     0px 0 1px rgba(202, 193, 186, 1),
     0 0 0px 2px rgba(224, 212, 210, 1);
 }
+
 .inset {
-  
   width: 125px;
   height: 80px;
   position: relative;
   vertical-align: middle;
   margin: 1px auto;
 }
+
 .inset .light {
   position: relative;
   border-radius: 0.75px;
@@ -384,6 +354,7 @@ height: 668;
   0 0 2px 1px #CBCBC1, 
   0 0 0.5px 0.5px #0C0D05;
 }
+
 .button-container .inset .light .inner {
   top: 2.5px;
   left: 2.5px;
@@ -441,9 +412,11 @@ height: 668;
   top: 2.5px;
   box-shadow: 0 0 0.5px #605654, 0 0 1px #9B9390;
 }
+
 .button-container .track:after {
   left: 55%;
 }
+
 .track-top {
   text-align: center;
   width: 768px;
@@ -452,9 +425,9 @@ height: 668;
   top: 0;
   padding-top: 3px;
   margin-bottom: 0px;
-  
   font-weight: bold;  
 }
+
 .track-top:before, .track-top:after {
   content: "";
   display: inline-block;
@@ -463,16 +436,19 @@ height: 668;
   height: 2px;
   background-color: #473E37;
   left: 0;
-  
   box-shadow: 0 0 0.5px #605654, 0 0 1px #9B9390;
 }
+
 .track-top:after {
   left: 55%;
 }
 
 .key {
   border-radius: 1.25px;
-  background-image: linear-gradient(270deg, #706756 5%, #9C958B 20%, transparent 50%), linear-gradient(90deg, #2E232B 5%, #524846 20%, transparent 50%), linear-gradient(#787dab 2%, #585e8d 4%, #43476b 8%, #43476b 90%, #232538 100%);
+  background-image:
+  linear-gradient(270deg, #706756 5%, #9C958B 20%, transparent 50%), 
+  linear-gradient(90deg, #2E232B 5%, #524846 20%, transparent 50%), 
+  linear-gradient(#808080 2%, #666666 4%, #3b3b3b 8%, #3b3b3b 90%, #292929 100%);
   background-size: 20px 70px, 25px 70px, 100% 100%;
   background-position: calc(100% + 14px) -10px, -19px -10px, top left;
   background-repeat: no-repeat;
@@ -489,6 +465,7 @@ height: 668;
   align-items: center;
   text-align: center;
 }
+
 .key p {
   font-size: 16px;
   font-weight: 600;
@@ -498,14 +475,15 @@ height: 668;
   text-shadow: 0 0 0.75px #C1BCB8, 0 0 1.25px #9D9894, 0 0 2.5px #A29D99;
   text-decoration: none;
 }
+
 .key:hover {
   background-image: linear-gradient(270deg, #706756 5%, #9C958B 20%, transparent 50%), linear-gradient(90deg, #2E232B 5%, #524846 20%, transparent 50%), linear-gradient(#787dab 2%, #585e8d 4%, #43476b 8%, #43476b 90%, #232538 100%);
   background-size: 20px 70px, 25px 70px, 100% 100%;
   background-position: calc(100% + 14px) -10px, -19px -10px, top left;
   text-decoration: none;
-  color: #c9c9c9;
-  
+  color: #c9c9c9; 
 }
+
 .key:active {
   position: relative;
   background-image: linear-gradient(270deg, #706756 5%, #9C958B 20%, transparent 50%), linear-gradient(90deg, #2E232B 5%, #524846 20%, transparent 50%), linear-gradient(#787dab 2%, #585e8d 4%, #43476b 8%, #43476b 90%, #232538 100%);
@@ -513,9 +491,13 @@ height: 668;
   background-position: calc(100% + 14px) -10px, -19px -10px, top left;
   text-decoration: none;
 }
+
 .save {
   border-radius: 1.25px;
-  background-image: linear-gradient(270deg, #706756 5%, #9C958B 20%, transparent 50%), linear-gradient(90deg, #2E232B 5%, #524846 20%, transparent 50%), linear-gradient(#7e9eae 2%, #5c8193 4%, #435e6c 8%, #435e6c 90%, #293a42 100%);
+  background-image:
+  linear-gradient(270deg, #706756 5%, #9C958B 20%, transparent 50%), 
+  linear-gradient(90deg, #2E232B 5%, #524846 20%, transparent 50%), 
+  linear-gradient(#8d8d8d 2%, #6b6b6b 4%, #686868 8%, #686868 90%, #595959 100%);
   background-size: 20px 70px, 25px 70px, 100% 100%;
   background-position: calc(100% + 14px) -10px, -19px -10px, top left;
   background-repeat: no-repeat;
@@ -531,6 +513,7 @@ height: 668;
   align-items: center;
   text-align: center;
 }
+
 .save:hover {
   background-image: linear-gradient(270deg, #706756 5%, #9C958B 20%, transparent 50%), linear-gradient(90deg, #2E232B 5%, #524846 20%, transparent 50%), linear-gradient(#7e9eae 2%, #5c8193 4%, #435e6c 8%, #435e6c 90%, #293a42 100%);
   background-size: 20px 70px, 25px 70px, 100% 100%;
@@ -538,12 +521,14 @@ height: 668;
   text-decoration: none;
   color: #c9c9c9;
 }
+
 .save:active {
   position: relative;
   background-image: linear-gradient(270deg, #706756 5%, #9C958B 20%, transparent 50%), linear-gradient(90deg, #2E232B 5%, #524846 20%, transparent 50%), llinear-gradient(#7e9eae 2%, #5c8193 4%, #435e6c 8%, #435e6c 90%, #293a42 100%);
   background-size: 20px 70px, 25px 70px, 100% 100%;
   background-position: calc(100% + 14px) -10px, -19px -10px, top left;
 }
+
 .off {
   border-radius: 1.25px;
   background-image: linear-gradient(270deg, #706756 5%, #9C958B 20%, transparent 50%), linear-gradient(90deg, #2E232B 5%, #524846 20%, transparent 50%), linear-gradient(#e67982 2%, #db3d4a 4%, #ac202b 8%, #ac202b 90%, #300810 100%);
@@ -562,6 +547,7 @@ height: 668;
   align-items: center;
   text-align: center;
 }
+
 .off:hover {
   background-image: linear-gradient(270deg, #706756 5%, #9C958B 20%, transparent 50%), linear-gradient(90deg, #2E232B 5%, #524846 20%, transparent 50%), linear-gradient(#e67982 2%, #db3d4a 4%, #ac202b 8%, #ac202b 90%, #300810 100%);
   background-size: 20px 70px, 25px 70px, 100% 100%;
@@ -569,6 +555,7 @@ height: 668;
   text-decoration: none;
   color: #c9c9c9;
 }
+
 .off:active {
   position: relative;
   background-image: linear-gradient(270deg, #706756 5%, #9C958B 20%, transparent 50%), linear-gradient(90deg, #2E232B 5%, #524846 20%, transparent 50%), linear-gradient(#e67982 2%, #db3d4a 4%, #971c26 8%, #971c26 90%, #300810 100%);
@@ -610,8 +597,9 @@ height: 668;
   flex: 0 0 100%;
   margin-right: 10px;
   margin-left: 6px;
-
+  cursor: none;
 }
+
 .switch:hover {
   background-image: 
   linear-gradient(270deg, #706756 5%, #9C958B 20%, transparent 50%), 
@@ -622,6 +610,7 @@ height: 668;
   text-decoration: none;
   color: #c9c9c9;
 }
+
 .switch:active {
   position: relative;
   background-image: 
