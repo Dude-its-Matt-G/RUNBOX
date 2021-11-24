@@ -11,7 +11,7 @@
 </p>
  
 <p align="center">
-The RUNBOX Super Controller is a GUI built on Electron.js for controlling GPIO enabled USB hubs.
+The RUNBOX is a GUI for touch screens built on Electron.js - Bootstrap for toggling GPIO enabled USB hubs on a Raspberry Pi.
 <br> 
 A touch screen USB hub for short.🙂
 </p>
@@ -223,4 +223,8 @@ Please be sure to read the contribution guide!</p>
 - [ ] GUI Editable button names
 - [ ] Better save profile management
 - [ ] Better theme managemnent
+- [ ] VoiceMeeter control
+- [ ] Spotify control
+- [ ] Hardware temperature monitoring
+- [ ] Stream control 
 - [ ] MOAR THEMES
