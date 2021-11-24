@@ -219,7 +219,7 @@ Please be sure to read the contribution guide!</p>
 
 ---
 # Goals 🎯
-- [ ] Proprietary board solution
+- [ ] Proprietary board solution (🏗️ In Work)
 - [ ] GUI Editable button names
 - [ ] Better save profile management
 - [ ] Better theme managemnent
