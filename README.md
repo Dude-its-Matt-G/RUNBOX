@@ -227,4 +227,5 @@ Please be sure to read the contribution guide!</p>
 - [ ] Spotify control
 - [ ] Hardware temperature monitoring
 - [ ] Stream control 
+- [ ] Remove unnecessary dependencies
 - [ ] MOAR THEMES
