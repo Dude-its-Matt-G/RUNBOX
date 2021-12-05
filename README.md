@@ -224,7 +224,7 @@ Please be sure to read the contribution guide!</p>
 - [ ] Better save profile management
 - [ ] Better theme managemnent
 - [ ] VoiceMeeter control
-- [ ] Spotify control
+- [ ] Spotify control (🏗️ In Work)
 - [ ] Hardware temperature monitoring
 - [ ] Stream control 
 - [ ] Remove unnecessary dependencies
