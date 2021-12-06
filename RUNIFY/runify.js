@@ -1,9 +1,27 @@
+if ( ! window.deferAfterjQueryLoaded ) {
+    window.deferAfterjQueryLoaded = [];
+    Object.defineProperty(window, "$", {
+        set: function(value) {
+            window.setTimeout(function() {
+                $.each(window.deferAfterjQueryLoaded, function(index, fn) {
+                    fn();
+                });
+            }, 0);
+            Object.defineProperty(window, "$", { value: value });
+        },
+
+        configurable: true
+    });
+}
+
+window.deferAfterjQueryLoaded.push(function() {
+
 var mainContainer = document.getElementById('js-main-container'),
     loginContainer = document.getElementById('js-login-container'),
     loginButton = document.getElementById('js-btn-login'),
     background = document.getElementById('js-background');
 
-var spotifyPlayer = new SpotifyPlayer();
+var spotifyPlayer = new spotifyplayer();
 
 var template = function (data) {
   return `
@@ -72,9 +90,4 @@ loginButton.addEventListener('click', () => {
 
 spotifyPlayer.init();
 
-
-
-
-
-
-
+});
