@@ -224,7 +224,7 @@ Please be sure to read the contribution guide!</p>
 - [ ] Better save profile management
 - [ ] Better theme managemnent
 - [ ] VoiceMeeter control
-- [ ] Spotify control (🏗️ In Work)
+- [ ] Spotify control (🏗️ In Work - currently using Now Playing Visualizer by [Jose Manuel Perez](https://github.com/JMPerez/spotify-player))
 - [ ] Hardware temperature monitoring
 - [ ] Stream control 
 - [ ] Remove unnecessary dependencies
