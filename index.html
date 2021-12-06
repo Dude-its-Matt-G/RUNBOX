@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
+    
+
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Aldrich&&family=Epilogue:wght@500&family=Source+Code+Pro:wght@400&family=VT323&display=swap" rel="stylesheet">
 
     <!-- Required meta tags -->
@@ -11,7 +13,7 @@
     <!--CSS loading here-->
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./RUNIFY/RUNIFY_Theme.css" />
-    <link rel="stylesheet" href="./nav.css" />
+    <link rel="stylesheet" href="./CSS/nav.css" />
     
     <!--Font loading here-->
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Share+Tech+Mono'>    
@@ -33,9 +35,9 @@
         var link = document.createElement('link');
         link.rel = 'stylesheet';
     if (themeName == "theme-dark") {
-        link.href = './dark_RBSC.css';
+        link.href = './CSS/dark_RBSC.css';
     } else {
-        link.href = './light_RBSC.css';
+        link.href = './CSS/light_RBSC.css';
     }
         document.head.appendChild(link);
     }
@@ -263,25 +265,91 @@
 </div> <!--This is the scrolling wrapper end tag-->
 </article>
 
-    <!-- Bootstrap Optional JavaScript -->
+    
+<!-- Bootstrap Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
     <script src="./bootstrap/js/bootstrap.min.js"></script>
     <!--USB function toggle script-->
-    <script src="./usb-toggle-functions.js"></script>
+    <script src="./JS/usb-toggle-functions.js"></script>
     <!--USB Save/Load script-->    
-    <script src="./usb-save-load.js"></script>
+    <script src="./JS/usb-save-load.js"></script>
     <!--Control side scrolling-->
-    <script src="./navigation.js"></script>
+    <script src="./JS/navigation.js"></script>
     <!--Load RUNIFY script (Spotify wrapper)-->
     <script src="./RUNIFY/spotify-player.js"></script>
-    
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=fetch"></script>
 
 
 <!--TEST SCRIPT FOR SPOTIFY-->
 
 
+<script>
+    var mainContainer = document.getElementById('js-main-container'),
+    loginContainer = document.getElementById('js-login-container'),
+    loginButton = document.getElementById('js-btn-login'),
+    background = document.getElementById('js-background');
+
+var spotifyPlayer = new SpotifyPlayer();
+
+var template = function (data) {
+  return `
+  <div class="screen-container">
+  <div class="screen-display">
+      <p class="song">Currently ${data.is_playing ? 'Playing' : 'Paused'}</p>
+      <p class="artist">
+          <span>${data.item.name}</span>
+          <span>BY</span>
+          <span>${data.item.artists[0].name}</span>
+          <span></span>
+      </p>
+      <p class="prog-bar"><div class="progress__bar" style="width:${data.progress_ms * 100 / data.item.duration_ms}%"></div></p>
+  </div>
+  <div class="screen-buttons">
+      <p class="audio-control-p"><button class="audio-control" id="switch">
+        <div id="hide_id"></div>⏮︎</button></p>
+      <p class="audio-control-p"><button class="audio-control" id="switch">
+        <div id="hide_id"></div>▶⏸︎</button></p>
+      <p class="audio-control-p"><button class="audio-control" id="switch">
+        <div id="hide_id"></div>⏭︎</button></p>
+      <p class="audio-control-p"><button class="audio-control" id="switch">
+        <div id="hide_id"></div>❤</button></p>
+  </div>
+  
+</div>
+<div class="album-art-paneling">
+  <div class="album-art-bg">
+      <div class="album-art glass"><img src="${data.item.album.images[0].url}"></div>
+  </div>    
+</div>
+  `;
+};
+
+spotifyPlayer.on('update', response => {
+  mainContainer.innerHTML = template(response);
+});
+
+spotifyPlayer.on('login', user => {
+  if (user === null) {
+    loginContainer.style.display = 'block';
+    mainContainer.style.display = 'none';
+  } else {
+    loginContainer.style.display = 'none';
+    mainContainer.style.display = 'block';
+  }
+});
+
+loginButton.addEventListener('click', () => {
+    spotifyPlayer.login();
+});
+
+spotifyPlayer.init();
+
+</script>
+
+
+<!--
 <script>
     if ( ! window.deferAfterjQueryLoaded ) {
     window.deferAfterjQueryLoaded = [];
@@ -298,7 +366,6 @@
         configurable: true
     });
 }
-
 window.deferAfterjQueryLoaded.push(function() {
 
 var mainContainer = document.getElementById('js-main-container'),
@@ -376,6 +443,6 @@ loginButton.addEventListener('click', () => {
 spotifyPlayer.init();
 
 });</script>
-    
+-->
 </body>
 </html>

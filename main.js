@@ -30,6 +30,7 @@ app.whenReady().then(() => {
   if (externalDisplay) {
     win = new BrowserWindow({
       webPreferences: {
+        webSecurity: false,
         nodeIntegration: true,
         contextIsolation: false,},      
       x: externalDisplay.bounds.x + 50,

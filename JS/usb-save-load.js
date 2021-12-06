@@ -228,7 +228,7 @@
       localStorage.setItem("myonoffswitch1_2", checkbox.checked);
       var checkbox2 = document.getElementById("myonoffswitch2");
       localStorage.setItem("myonoffswitch2_2", checkbox2.checked);
-      var checkbox2 = document.getElementById("myonoffswitch4");
+      var checkbox2 = document.getElementById("myonoffswitch3");
       localStorage.setItem("myonoffswitch3_2", checkbox2.checked);
       
       var checkbox = document.getElementById("myonoffswitch4");

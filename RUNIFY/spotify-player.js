@@ -94,7 +94,7 @@ class SpotifyPlayer {
   
         const url = getLoginURL(['user-read-playback-state']);
   
-        const width = 450, height = 730, left = screen.width / 2 - width / 2, top = screen.height / 2 - height / 2;
+        const width = 600, height = 730, left = screen.width / 2 - width / 2, top = screen.height / 2 - height / 2;
   
         window.addEventListener(
           'message',

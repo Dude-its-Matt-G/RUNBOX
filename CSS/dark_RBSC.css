@@ -628,8 +628,9 @@ height: 668;
 
 .album-art-paneling {
   top: 2.5px;
+  display: inline-block;
   height: 498px;
-  width: 375px;
+  max-width: 350px;
   background-color: transparent;
   box-shadow: 
   -1px 0px 1px 0px #212121, 

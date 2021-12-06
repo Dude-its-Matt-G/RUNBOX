@@ -13,12 +13,13 @@ body {
   .screen-container {
       margin: 10px 23px auto;
       width: 600px;
-      height: 148px;
+      height: 175px;
       border-radius: 7px;
       background-color: #212121;
       top: 288px;
       box-shadow: 0 0 2px 0.5px rgba(65, 61, 58, 0.15) inset;
-      display: block;
+      display: inline-block;
+      vertical-align: top;
     border-top: 1px solid rgba(109, 109, 109, 0.6);
     border-left: 1px solid rgba(121, 121, 121, 0.6);
     border-right: 2px solid rgba(123, 123, 123, 0.32);
@@ -35,7 +36,7 @@ body {
       left: 0;
       right: 0;
       width: 95%;
-      height: 70px;
+      height: 90px;
       margin-left: auto;
       margin-right: auto;
       border-radius: 5px;
@@ -56,7 +57,7 @@ body {
         0 -2px 1px #7A7772 inset;
     padding: 5px;
   }
-  
+
   .screen-buttons {
       width: 100%;
       height: 40px;
@@ -127,7 +128,7 @@ body {
   }
 
   .album-art-bg {
-    width: 340px;
+    max-width: 340px;
     height: auto;
     position: relative;
     background-color: #212121;
@@ -226,9 +227,11 @@ body {
 }
 
 .progress__bar {
-  background-color: #eee;
+  background-color: rgb(36, 36, 36);
   border: 0.1em solid transparent;
   height: 0.75em;
+  max-width: 90%;
+  margin: 10px;
 }
 
 /** Background **/
