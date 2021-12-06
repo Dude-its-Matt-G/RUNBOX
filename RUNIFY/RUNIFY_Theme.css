@@ -1,0 +1,264 @@
+body {
+    border-radius: 0px;
+    background-image: linear-gradient(#383838 7.4% 9.5%, #282828 96%), linear-gradient(170deg, #212121, #141414);
+    background-size: 1024px 768px, 1024px 768px;
+    background-position: 0 0, 0 0;
+    font-family: Helvetica, arial, sans-serif;
+    text-transform: uppercase;
+    position: absolute;
+    color: #ececec;
+    cursor: none;
+  }
+  
+  .screen-container {
+      margin: 10px 23px auto;
+      width: 600px;
+      height: 148px;
+      border-radius: 7px;
+      background-color: #212121;
+      top: 288px;
+      box-shadow: 0 0 2px 0.5px rgba(65, 61, 58, 0.15) inset;
+      display: block;
+    border-top: 1px solid rgba(109, 109, 109, 0.6);
+    border-left: 1px solid rgba(121, 121, 121, 0.6);
+    border-right: 2px solid rgba(123, 123, 123, 0.32);
+    border-bottom: 2px solid rgba(107, 107, 107, 0.32);
+      
+    }
+  
+  .screen-display {
+      color:rgb(36, 36, 36);
+      display: block;
+      background-color: red;
+      position: relative;
+      top: 20px;
+      left: 0;
+      right: 0;
+      width: 95%;
+      height: 70px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 5px;
+      background-image:
+        linear-gradient(90deg, transparent 15%, rgba(134, 135, 129, 0.05), transparent 85%),
+        radial-gradient(rgba(92, 93, 87, 0.75), transparent 70%),
+        linear-gradient(#65675C, #727469 );
+      background-size: 10px 100%, 200px 200px, 100% 100%;
+      background-position: 0 0, center center, 0 0;
+      background-repeat: repeat, no-repeat, no-repeat;
+      box-shadow:
+        0 0 2px 0 #2B262C,
+        0 0 1px 1px #221B23 inset,
+        0 0 3px #221B23 inset,
+        0 0 3px 0.5px #383838 inset,
+        0 0 5px #484848 inset,
+        9px 0 7px -4px #605A5C inset,
+        0 -2px 1px #7A7772 inset;
+    padding: 5px;
+  }
+  
+  .screen-buttons {
+      width: 100%;
+      height: 40px;
+      position: relative;
+      top: 23px;
+      right: 0;
+      margin: 5px auto;
+      display: grid;
+      grid-template-columns: 25% 25% 25% 25%;
+      color: #FFF;
+  }
+  
+  .song {
+    margin-left:10px;
+    margin-top: 5px;
+    height:12px
+}
+  .artist {
+    margin-left:10px;
+    height:12px
+  }
+  
+  .audio-control {
+    position: relative;
+    background-image: 
+    linear-gradient(270deg, #706756 5%, #9C958B 20%, transparent 50%), 
+    linear-gradient(90deg, #2E232B 5%, #524846 20%, transparent 50%), 
+    linear-gradient(#595959 2%, #595959 4%, #595959 8%, #2b2b2b 90%, #363636 100%);
+    background-size: 20px 70px, 25px 70px, 100% 100%;
+    background-position: calc(100% + 14px) -10px, -19px -10px, top left;
+    background-repeat: no-repeat;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.45), 2px 5px 7px -2px rgba(0, 0, 0, 0.2), 0 0 1px 0.25px #383129, 0.5px 0 1px -0.25px #453D3A inset, 0 -1.25px 1.5px -0.75px #22171B inset, 0 0px 0px 0px #353535 inset;
+    color: #ececec;
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    align-items: center;
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    display: inline-block;
+    flex: 0 0 100%;
+    margin-right: 10px;
+    margin-left: 6px;
+    cursor: none;
+  }
+  
+  .audio-control:hover {
+    background-image: 
+    linear-gradient(270deg, #706756 5%, #9C958B 20%, transparent 50%), 
+    linear-gradient(90deg, #2E232B 5%, #524846 20%, transparent 50%), 
+    linear-gradient(#595959 2%, #595959 4%, #595959 8%, #2b2b2b 90%, #363636 100%);
+    background-size: 20px 70px, 25px 70px, 100% 100%;
+    background-position: calc(100% + 14px) -10px, -19px -10px, top left;
+    text-decoration: none;
+    color: #ececec;
+  }
+  
+  .audio-control:active {
+    position: relative;
+    background-image: 
+    linear-gradient(270deg, #706756 5%, #9C958B 20%, transparent 50%), 
+    linear-gradient(90deg, #2E232B 5%, #524846 20%, transparent 50%), 
+    linear-gradient(#595959 2%, #595959 4%, #595959 8%, #2b2b2b 90%, #363636 100%);
+    background-size: 20px 70px, 25px 70px, 100% 100%;
+    background-position: calc(100% + 14px) -10px, -19px -10px, top left;
+  }
+
+  .album-art-bg {
+    width: 340px;
+    height: auto;
+    position: relative;
+    background-color: #212121;
+    border-radius: 7px;
+    border-top: 1px solid rgba(109, 109, 109, 0.6);
+    border-left: 1px solid rgba(121, 121, 121, 0.6);
+    border-right: 2px solid rgba(123, 123, 123, 0.32);
+    border-bottom: 2px solid rgba(107, 107, 107, 0.32);
+    top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    margin-left: 10px;
+  }
+
+  .album-art {
+    width: 90%;
+    height: 90%;
+    background-color: #5f2d2d00;
+    border-radius: 4px;  
+  }
+
+  img {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;    
+  }
+  
+
+  .audio-control-p {
+      margin: 5px auto;
+  }
+
+  /** Buttons **/
+.btn {
+  background-color: transparent;
+  border-radius: 2em;
+  border: 0.2em solid #1ecd97;
+  color: #1ecd97;
+  cursor: pointer;
+  font-size: 3vmin;
+  padding: 0.7em 1.5em;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+}
+
+.btn:hover {
+  background: #1ecd97;
+  color: #333;
+}
+
+.btn--login {
+  margin: 0 auto;
+}
+
+/** Now Playing **/
+.now-playing__name {
+  font-size: 1.5em;
+  margin-bottom: 0.2em;
+}
+
+.now-playing__artist {
+  margin-bottom: 1em;
+}
+
+.now-playing__status {
+  margin-bottom: 1em;
+}
+
+.now-playing__img {
+  float: left;
+  margin-right: 10px;
+  text-align: right;
+  width: 45%;
+}
+
+.now-playing__img img {
+  max-width: 80vmin;
+  width: 100%;
+}
+
+.now-playing__side {
+  margin-left: 5%;
+  width: 45%;
+}
+
+/** Progress **/
+.progress {
+  border: 0.15em solid #eee;
+  height: 1em;
+}
+
+.progress__bar {
+  background-color: #eee;
+  border: 0.1em solid transparent;
+  height: 0.75em;
+}
+
+/** Background **/
+.background {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center center;
+  filter: blur(8em) opacity(0.6);
+  position: absolute;
+}
+
+.main-wrapper {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  position: relative;
+  width: 80%;
+  z-index: 1;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.main-container {
+  flex: 1;
+}

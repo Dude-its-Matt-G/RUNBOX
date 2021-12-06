@@ -8,13 +8,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Super Controller</title>
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
+    
+    <link rel="stylesheet" href="./RUNIFY/RUNIFY_Theme.css" />
+    <link rel="stylesheet" href="./nav.css" />
 
     <!-- Bootstrap Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    
     <script src="./node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
     <script src="./bootstrap/js/bootstrap.min.js"></script>
+    
+    <script src="./RUNIFY/runify.js"></script>
+
+    <!--Control side scrolling-->
+    <script src="./navigation.js"></script>
+
+
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Share+Tech+Mono'>
+    
     <!--<link rel="stylesheet" href="./style.css">-->
     <!-- <link href="./dark_RBSC.css" rel="stylesheet" type="text/css">  -->
     
@@ -72,34 +84,40 @@
                 </div>
                 <div class="function-wrapper">
                     <div class="function-titles">
+                        <div class="funct-child">USBHB</div>
                         <div class="funct-child">MUSIC</div>
-                        <div class="funct-child">HWMON</div>
                         <div class="funct-child">AUDIO</div>
                         <div class="funct-child">THEME</div>
                         <div class="funct-child">CONF</div>
                     </div>
                 <div class="theme_button">
-                    <button class="switch" id="switch" onclick="toggleTheme()">
-                        <div id="hide_id"></div>•</button>
-                    <button class="switch" id="switch" onclick="toggleTheme()">
-                        <div id="hide_id"></div>•</button>
+                    <button class="switch" id="switch">
+                        <div id="hide_id"></div><a href="#USB">•</a></button>
+                    <button class="switch" id="switch">
+                        <div id="hide_id"></div><a href="#RUNIFY">•</a></button>
+                    <button class="switch" id="switch">
+                            <div id="hide_id"></div><a href="#AUDIO">•</a></button>
                     <button class="switch" id="switch" onclick="toggleTheme()">
                             <div id="hide_id"></div>•</button>
-                    <button class="switch" id="switch" onclick="toggleTheme()">
-                            <div id="hide_id"></div>•</button>
-                    <button class="switch" id="switch" onclick="toggleTheme()">
+                    <button class="switch" id="switch">
                             <div id="hide_id"></div>•</button>
                     </div>
+                    
                 </div>
             </div>   
         </div>
     </div>
-<div class="everything">
+
+<article class="UBER-container-sect">
+<div class="UBER-container-div">
+<!--BEGIN USB CONTROL-->
+<section class="APP" id="USB">
+<div class="USB">
+    
     <div class="left-side">
     <div class="button-container">
     <p class="track-top">  control a  </p>
-    
-                            
+                                
     <div class="buttons"> 
                 
       <div class="channel">
@@ -232,10 +250,26 @@
                 <div class="vl"></div>
             <a class="off" onclick="uncheck();">OFF</a>
         </div>
-<!--Below is what maps all of the buttons to their respective on-off commands-->
-</div>
-</div>
 
+</div>
+</div>
+</section>
+<!--BEGIN RUNIFY CONTROL-->
+<section class="APP" id="RUNIFY">
+<div class="RUNIFY">
+    
+    <div class="login-container hidden" id="js-login-container">
+        <button class="btn btn--login" id="js-btn-login">Login with Spotify</button>
+      </div>
+      <div class="main-container hidden" id="js-main-container"></div>
+    
+</div>
+</section>
+<!--END RUNIFY CONTROL-->
+
+</div> <!--This is the scrolling wrapper end tag-->
+</article>
+<!--Below is what maps all of the buttons to their respective on-off commands-->
 <script>    
     const { ipcRenderer } = require('electron')
     let isOn = false

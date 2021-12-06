@@ -1,0 +1,64 @@
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+
+
+  
+.UBER-container-sect {
+    overflow-y: hidden;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    position: relative;
+  }
+  
+.UBER-container-sect::-webkit-scrollbar {
+    display: none;
+  }
+
+.UBER-container-sect::after {
+    content: " ";
+    clear: both;
+  }
+
+.UBER-container-div {
+    width: 200%;
+    height: 100%;
+    position: relative;
+  }
+  
+.UBER-container-div::-webkit-scrollbar {
+    display: none;
+  }
+
+.UBER-container-div::after {
+    content: " ";
+    clear: both;
+  }
+  
+.APP {
+    position: relative; 
+    float: left;
+    width: 50%;
+  }
+.APP-content {
+    z-index: 1;
+  }
+
+.RUNIFY {
+    display: flex;
+    margin-left: 3px;
+    position: relative;
+  }
+.USB {
+    position: relative;
+}
