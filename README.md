@@ -39,6 +39,7 @@ A touch screen USB hub for short.🙂
 * Soldering tools
 
 ---
+
 # How-to 🤨
 ## Super Beginner Stuff
 ```diff
@@ -55,6 +56,8 @@ https://www.makersupplies.sg/blogs/tutorials/how-to-install-node-js-and-npm-on-t
 https://projects.raspberrypi.org/en/projects/getting-started-with-git
 <br>
 <br>
+
+
 ## Cloning Repo
 
 1. Clone the repo
@@ -73,6 +76,7 @@ npm install
 ```sh
 npm run start
 ```
+
 
 ## Ykush Setup
 
@@ -120,6 +124,7 @@ var B4P3 = new Gpio(26, 'out');
 The last three lines are for a fourth board I was running at one point.
 <br>
 
+
 ## Waveshare Setup
 
 In order to get the Waveshare to display properly you will need to edit the config.txt.
@@ -143,20 +148,36 @@ hdmi_cvt:1=1024x600 60
 
 *Ensure not to plug the monitors to the wrong ports.*
 
-You will also need to setup the touch screen on the Waveshare.
-Now this may differ from time to time especially if you don't have two monitors plugged in. Since I do at all times, for example I have to run this code at startup:
+Now, after you plug in the Waveshare's USB cable into the Pi for touch screen control youll notice that the touch inputs are being sent to the wrong screen. To fix this you will need to run an xinput command in the terminal that tells the Pi which screen the input should go to.
+Now this command may differ from time to time especially if you don't have two monitors plugged in. Since I do at all times the script never needs to be changed. I have this line in the same startup script as the lines for opening the app on boot.
+
 ```
 xinput map-to-output 9 HDMI-2
 ```
+
 Please visit this page for instructions on how to tailor this code for your own use:\
 https://networks.guru/2018/11/23/using-dual-monitor-dual-touch-screens-on-ubuntu/
 
-the xinput code I have in a startup "user service"
 
-You can follow these instructions to assist in the creation of startup services:\
+## Startup Service Setup
+
+The script I have running at boot is located in the "/home/pi" directory and named startup.sh for ease of use.
+Inside this file looks like this:
+
+```
+#! /bin/bash
+
+xinput map-to-output 9 HDMI-2
+cd "home/pi/RUNBOX" && npm start
+export NODE_ENV=development
+npm start
+```
+As you can see we are sending the xinput command so that we don't have to do it ourselves at startup and we are also sending the commands for the app to open.
+
+You can follow these instructions to assist in the creation of startup services:\\
 https://scruss.com/blog/2017/10/22/creating-a-systemd-user-service-on-your-raspberry-pi/
 
----
+
 # Notes 🙃
 
 * I added an on/off button using the instructions from:
